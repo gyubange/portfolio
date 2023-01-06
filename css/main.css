@@ -247,3 +247,17 @@ header .inner .right_menu li:nth-child(1) {
     height: 100%;
     object-fit: cover;
 }
+.profile .list .info{
+    width: 1000px;
+    padding-left: 100px;
+}
+.profile .list .info ul{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 20px;
+    margin: 10px 0;
+}
+.profile .list .info ul li strong{
+    width: 180px;
+    display: inline-block;
+}
