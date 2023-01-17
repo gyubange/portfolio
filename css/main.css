@@ -7,7 +7,7 @@ header {
     font-family: 'GangwonEdu_OTFBoldA';
     position: fixed;
     width: 100%;
-    background-color: rgba(153, 153, 153, 0.582);
+    background-color: rgb(153, 153, 153);
 }
 header .inner {
     height: 100%;
@@ -45,12 +45,16 @@ header .inner .right_menu li:nth-child(1) {
 
 /* 🌹 .video */
 .video {
-    padding: 180px 0;
-    font-family: 'GangwonEdu_OTFBoldA';
+    padding: 120px 0;
+}
+.video .inner .title {
+    text-align: center;
 }
 .video .inner .title h3{
-    font-family: 'GangwonEdu_OTFBoldA';
     font-weight: 700;
+}
+.video .tab_menu{
+    text-align: center;
 }
 .video .tab_menu li {
     display: inline-block;
@@ -95,6 +99,7 @@ header .inner .right_menu li:nth-child(1) {
     width: 100%;
     padding-bottom: 56.25%;
     position: relative;
+    z-index: -1;
 }
 .video .list .list_in .swiper-slide .youtube_wrap .youtube iframe {
     width: 100%;
@@ -160,7 +165,7 @@ header .inner .right_menu li:nth-child(1) {
 /* .web */
 
 .web{
-    padding: 180px 0;
+    padding: 120px 0;
 }
 .web .title{
     text-align: center;
@@ -200,7 +205,6 @@ header .inner .right_menu li:nth-child(1) {
     margin-bottom: 10px;
 }
 .web .list .item .info dl dt{
-    margin-left: 20px;
     font-size: bold;
 }
 .web .list .item .info .btn{
@@ -209,7 +213,7 @@ header .inner .right_menu li:nth-child(1) {
 
 /* graphic */
 .graphic{
-    padding: 180px 0;
+    padding: 120px 0;
 }
 .graphic .title{
     text-align: center;
@@ -228,14 +232,18 @@ header .inner .right_menu li:nth-child(1) {
     width: 100%;
     object-fit: cover;
 }
-.graphic .list .item .info .h4{
+.graphic .list .item .info h4{
     margin: 15px 0 0px;
     font-size: 25px;
 }
-
+.graphic .list .item .info p{
+    margin: 15px 0 0px;
+    font-size: 15px;
+    color: chartreuse;
+}
 /* profile */
 .profile{
-    padding: 180px 0;
+    padding: 100px 0;
     background-color: #999;
 }
 .profile .list{
