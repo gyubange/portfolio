@@ -3,11 +3,6 @@
 /* 초기값, 공통요소(제목, 버튼, 폰트스타일), 웹폰트 */
 
 @font-face {
-    font-family: 'GangwonEdu_OTFBoldA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-
     font-family: 'KIMM_Bold';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
     font-weight: 700;
