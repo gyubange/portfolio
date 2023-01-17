@@ -7,20 +7,30 @@
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFBoldA.woff') format('woff');
     font-weight: 300;
     font-style: normal;
+
+    font-family: 'KIMM_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2212@1.0/KIMM_Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'GangwonEdu_OTFBoldA';
+    font-family: 'KIMM_Bold';
 }
+
 a {
     text-decoration: none;
     color: inherit;
 }
+
 li {
     list-style: none;
 }
+
 body {
     color: #333;
     line-height: 1;
@@ -31,13 +41,16 @@ body {
     width: 1440px;
     margin: 0 auto;
 }
+
 .title {
     margin-bottom: 40px;
 }
+
 .title h3 {
     font-size: 50px;
     margin-bottom: 16px;
 }
+
 .title p {
     font-size: 18px;
 }
@@ -51,6 +64,7 @@ body {
     border-radius: 40px;
     display: inline-block;
 }
+
 .btn li:nth-child(2) {
     height: 40px;
     line-height: 40px;
