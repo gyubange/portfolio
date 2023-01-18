@@ -4,10 +4,14 @@
 /* 🌹header */
 header {
     height: 100px;
-    font-family: 'GangwonEdu_OTFBoldA';
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    background-color: rgb(153, 153, 153);
+    z-index: 99;
+}
+header.on{
+    background-color: rgba(51, 51, 51, 0.479);
 }
 header .inner {
     height: 100%;
@@ -43,15 +47,39 @@ header .inner .right_menu li:nth-child(1) {
     margin-right: 20px;
 }
 
+
+/* 🌹 .main_visual */
+.main_visual {
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: -1;
+    /* 컨텐츠 뒤로 보내기 */
+}
+.main_visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: scale-down;
+}
+
 /* 🌹 .video */
 .video {
     padding: 120px 0;
+    margin-top: 10vh;
 }
 .video .inner .title {
     text-align: center;
 }
 .video .inner .title h3{
     font-weight: 700;
+}
+.video .inner h2{
+    color: #333;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
 }
 .video .tab_menu{
     text-align: center;
@@ -99,7 +127,6 @@ header .inner .right_menu li:nth-child(1) {
     width: 100%;
     padding-bottom: 56.25%;
     position: relative;
-    z-index: -1;
 }
 .video .list .list_in .swiper-slide .youtube_wrap .youtube iframe {
     width: 100%;
@@ -137,6 +164,7 @@ header .inner .right_menu li:nth-child(1) {
     margin-top: 120px;
 }
 
+
 /* 슬라이드 버튼, 페이지 변경 */
 .video .list{
     position: relative;
@@ -145,15 +173,13 @@ header .inner .right_menu li:nth-child(1) {
     position: static;
 }
 .video .swiper-button-next{
-    top:0;
-    right: auto;
-    left: 10px;
+    top:50%;
+    right: 10px;
     margin-top: 0;
 }
 .video .swiper-button-prev{
-    top:0;
-    left: auto;
-    left: 10px;
+    top:50%;
+    left: 0px;
     margin-top: 0;
 }
 .video .swiper-pagination {
@@ -188,12 +214,12 @@ header .inner .right_menu li:nth-child(1) {
     object-fit: cover;
 }
 .web .list .item .info {
-    background-color: aliceblue;
     padding: 40px;
 }
 .web .list .item .info h4{
     font-size: 25px;
     stroke-width: 1px;
+    font-weight: bold;
 }
 .web .list .item .info p{
     font-size: 14px;
@@ -236,11 +262,18 @@ header .inner .right_menu li:nth-child(1) {
     margin: 15px 0 0px;
     font-size: 25px;
 }
-.graphic .list .item .info p{
+/* .graphic .list .item .info p{
     margin: 15px 0 0px;
     font-size: 15px;
-    color: chartreuse;
+    color: #555;
+} */
+.graphic .list .item .info p img{
+    margin-top: 10px;
+    width: 25px;
+    height: 25px;
 }
+
+
 /* profile */
 .profile{
     padding: 100px 0;
@@ -269,12 +302,18 @@ header .inner .right_menu li:nth-child(1) {
     flex-wrap: wrap;
     font-size: 20px;
     margin: 10px 0;
-    font-size: 25px;
+    line-height: 1.8;
+}
+.profile .list .info ul li{
+    font-size: 20px;
 }
 .profile .list .info ul li strong{
     width: 180px;
     display: inline-block;
+    font-weight: bold;
+    font-size: 25px;
 }
+
 .profile .list .info .skill {
     margin-top: 40px;
 
@@ -282,23 +321,17 @@ header .inner .right_menu li:nth-child(1) {
 .profile .list .info .skill li{
     height: 50px;
     line-height: 50px;
-    border-radius: 40px;
-    background-color: #555;
     color: #fff;
     font-size: 16px;
     margin: 5px;
     padding: 0 30px;
-}
-.profile .list .info .skill .w{
-    background-color: bisque;
-    color:#333
 }
 
 /* footer */
 
 footer {
     padding: 70px 0;
-    background-color: #666;
+    background-color: #333;
     color: #fff;
     text-align: center;
     font-size: 20px
