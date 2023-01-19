@@ -24,9 +24,9 @@
             <h1>
                 <a href="#"><img src="img/logo.png"></a>
             </h1>
-            <nav>
+            <nav class="menu">
                 <ul>
-                    <li><a href="#">영상편집/모션그래픽</a></li>
+                    <li class="on"><a href="#">영상편집/모션그래픽</a></li>
                     <li><a href="#">웹디자인/웹퍼블리싱</a></li>
                     <li><a href="#">그래픽디자인</a></li>
                     <li><a href="#">나의소개</a></li>
@@ -42,7 +42,7 @@
 
     <div class="main_visual">
         <!-- placeholder.com -->
-        <img src="img/ㅂbo2.png" alt="" />
+        <img src="img/NAME.gif" alt="" />
     </div><!-- .main_visual end -->
 
     <section class="video">
@@ -469,7 +469,7 @@
                         </dl>
                         <ul class="btn">
                             <li><a href="sub/ipark/index.html" target="_blank">제작사이트보기</a></li>
-                            <li><a href="lib/ipark_plan.jpg">기획서보기</a></li>
+                            <li><a href="sub/ipark/process.html" target="_blank">기획서보기</a></li>
                         </ul> <!-- .btn end -->
                     </div><!-- .info end -->
                 </div><!-- .item end/1 -->
@@ -491,7 +491,7 @@
                         </dl>
                         <ul class="btn">
                             <li><a href="sub/LEGO/index.html" target="_blank">제작사이트보기</a></li>
-                            <li><a href="lib/legolan_plan.jpg">기획서보기</a></li>
+                            <li><a href="#" target="_blank">기획서보기</a></li>
                         </ul> <!-- .btn end -->
                     </div><!-- .info end -->
                 </div><!-- .item end/2 -->
@@ -603,7 +603,7 @@
 
     <footer>
         <ul>
-            <li><a href="#">유튜브 채널</a> </li>
+            <li><a href="#" target="_blank">유튜브 채널</a> </li>
             <li><a href="#" download="">지원서 다운로드</a></li>
         </ul>
         <p>COPYRIGHT 2023. 디자인 BY 김규한. ALL RIGHTS RESERVED</p>
@@ -664,13 +664,13 @@
 
     <!-- 코드 작성하기 -->
     <script>
-        $('nav a').click(function (e) {
+        $('.menu a').click(function (e) {
             e.preventDefault();
         }); /* a 링크 방지 */
 
         /* .btn ul li를 클릭할때 해당 section이동 */
 
-        $('nav ul li').click(function () {
+        $('.menu ul li').click(function () {
             //클릭시 순번 index값 구하기
             //section태그의 순서 offset().top;
             let page = $('section').eq($(this).index()).offset().top;
@@ -682,14 +682,14 @@
             }, 600, 'easeInExpo');
 
             //버튼 스타일 변화
-            $('nav ul li').removeClass('on');
+            $('.menu ul li').removeClass('on');
             $(this).addClass('on');
         });
 
         //스크롤을 했을 때 // 해당 section 안으로 화면이 보이면 // .btn ul li 스타일이 변화
         let headerTop = $('header').offset().top; 
         $(window).scroll(function () {
-            let scrollBar = $(window).scrollTop() + 100;
+            let scrollBar = $(window).scrollTop() + 80;
             let scrollBar1 = $(window).scrollTop();
             //스크롤바의 y축값 = 0 + 50px
 //헤더가 가지고 있는 y축값보다
