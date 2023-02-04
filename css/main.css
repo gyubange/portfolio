@@ -11,7 +11,7 @@ header {
     z-index: 99;
 }
 header.on{
-    background-color: rgba(153, 153, 153, 0.445);
+    background-color: #06102162;
     color: #fff;
     font-weight: bold;
 }
@@ -33,12 +33,11 @@ header .inner .menu ul li {
     margin: 0 35px;
 }
 header .inner .menu ul li:hover{
-    font-size: 30px;
     font-weight: bold;
-    color: antiquewhite;
+    color: #4B53F2;
 }
 header .inner .menu ul li.on{
-    color: lightblue;
+    color: #4B53F2;
     font-weight: bold;
 }
 header .inner .right_menu li img{
@@ -56,35 +55,32 @@ header .inner .right_menu li:nth-child(1) {
 
 /* 🌹 .main_visual */
 .main_visual {
-    position: static;
-    top: 0;
-    left: 0;
-    width: 100%;
-    margin-top: 15vh;
     z-index: -1;
-    /* 컨텐츠 뒤로 보내기 */
+    position: fixed;
 }
-.main_visual img {
-    width: 1920px;
-    height: 820px;
-    object-fit:scale-down;
+.main_visual video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     margin: 0 auto; 
-
 }
 
 /* 🌹 .video */
 .video {
-    position: relative;
     padding: 120px 0;
 }
- 
-.video .back img{
+.video .inner{
+    position: relative;
+    padding: 0 30px 0 30px; 
+} 
+.video .inner .back img{
     z-index: -1;
     position: absolute;
-    top: 0;
-    left: 200px;
-    width: 1500px;
-    height: 100%;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    height: 750px;
+    align-items: center;
 }
 .video .inner .title {
     text-align: center;
@@ -94,7 +90,7 @@ header .inner .right_menu li:nth-child(1) {
 }
 .video .inner h2{
     color: #333;
-    margin-top: 20px;
+    margin-top: 80px;
     text-align: center;
     font-size: 20px;
 }
@@ -155,6 +151,7 @@ header .inner .right_menu li:nth-child(1) {
 .video .list .list_in .swiper-slide .info {
     width: 40%;
     padding-left: 50px;
+    
 }
 .video .list .list_in .swiper-slide .info h4{
     font-size: 25px;
@@ -190,14 +187,14 @@ header .inner .right_menu li:nth-child(1) {
     position: static;
 }
 .video .swiper-button-next{
-    top:100%;
-    right: 10px;
+    top: 110%;
+    right: 50px;
     margin-top: 0;
     color: #333;
 }
 .video .swiper-button-prev{
-    top:100%;
-    left: 0px;
+    top:110%;
+    left: 50px;
     margin-top: 0;
     color: #333;
 }
@@ -212,7 +209,8 @@ header .inner .right_menu li:nth-child(1) {
 /* .web */
 
 .web{
-    padding: 120px 0;
+    margin-top: 50px;
+    padding: 200px 0;
 }
 .web .title{
     text-align: center;
@@ -231,28 +229,31 @@ header .inner .right_menu li:nth-child(1) {
     bottom: 0;
     transition: 0.5s;
     height: 50%;
-    border-radius: 40px 0 ;
+
 }
 .web .list .item:nth-child(1):hover .info{
     background-color: rgba(240, 128, 128, 0.747);
+    border-radius: 40px 0 0 ;
 }
 .web .list .item:nth-child(2):hover .info{
     background-color: rgba(144, 238, 144, 0.664);
+    border-radius: 0 40px 0 0 ;
     color: #333;
 }
 .web .list .item figure{
     width: 100%;
-    height: 500px;
+    height: 600px;
 }
 
 .web .list .item img{
     width: 100%;
-    height: 500px;
+    height: 600px;
     object-fit:cover ;
 }
 
 .web .list .item .info {
-    background-color: rgba(85, 85, 85, 0.596); color: aliceblue; 
+    background-color: rgba(85, 85, 85, 0.596); 
+    color: aliceblue; 
     position: absolute; 
     bottom: 0;
     left: 0;
@@ -281,10 +282,19 @@ header .inner .right_menu li:nth-child(1) {
 .web .list .item .info .btn{
     margin-top: 40px;
 }
+.web .list .item .info .btn li:nth-child(1){
+    background-color: #e2e1e2e5;
+    color: #333;
+}
+.web .list .item .info .btn li:nth-child(2){
+    background-color: #efe99a;
+    color: #333;
+}
+
 
 /* graphic */
 .graphic{
-    padding: 120px 0;
+    padding: 200px 0;
 }
 .graphic .title{
     text-align: center;
@@ -295,13 +305,15 @@ header .inner .right_menu li:nth-child(1) {
     flex-wrap: wrap;
 }
 .graphic .list .item{
-    width: calc(100% / 4 - 15px);
+    width: calc(100% / 3 - 20px);
     margin-bottom: 30px;
+    border: 5px solid #fff;
 }
 .graphic .list .item a img{
     height: 340px;
     width: 100%;
     object-fit: cover;
+
 }
 .graphic .list .item .info h4{
     margin: 15px 0 0px;
@@ -322,6 +334,7 @@ header .inner .right_menu li:nth-child(1) {
 /* profile */
 .profile{
     padding: 100px 0;
+    background-color: #666;
 }
 .profile .list{
     display: flex;
@@ -365,7 +378,7 @@ header .inner .right_menu li:nth-child(1) {
 .profile .list .info .skill li{
     height: 50px;
     line-height: 50px;
-    color: #fff;
+    color: #eee;
     font-size: 16px;
     margin: 5px;
     padding: 0 30px;
