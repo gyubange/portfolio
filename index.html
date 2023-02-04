@@ -12,7 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-
+    
     <link href="css/common.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -42,26 +42,25 @@
         </div><!-- .inner end -->
     </header>
 
-    <div class="main_visual" data-aos="zoom-in" data-aos-duration="300">
+    <div class="main_visual">
         <!-- placeholder.com -->
-        <img src="img/NAME.gif" alt="" />
+        <video autoplay muted loop>
+            <source src="img/back.mp4" type="video/mp4">
+        </video>    
 
     </div><!-- .main_visual end -->
 
     <section class="video" data-aos="fade-down"
     data-aos-easing="linear"
     data-aos-duration="1500">
-
-        <div class="back">
-            <img src="img/back.png" alt="">
-        </div>
-
         <div class="inner">
             <div class="title">
                 <h3>영상편집/모션그래픽</h3>
                 <p>프리미어프로, 애프터이펙트 등을 사용하여 영상편집/모션그래픽 진행</p>
             </div><!-- .title end -->
-
+            <div class="back">
+                <img src="img/back.png" alt="">
+            </div>
             <ul class="tab_menu">
                 <li class="on">게임</li>
                 <li>홍보영상</li>
@@ -458,13 +457,15 @@
     </section><!-- .video end -->
 
     <section class="web">
+
         <div class="inner">
             <div class="title">
                 <h3>웹 디자인 / 웹 퍼블리싱</h3>
                 <p>포토샵, 일러스트레이터, 비주얼스튜디오코드를 이용하여 웹사이트 구현</p>
             </div><!-- .title end -->
+
             <div class="list">
-                <div class="item" data-aos="fade-right" data-aos-offset="500" data-aos-duration="500" data-aos-easing="ease-in-sine">
+                <div class="item" data-aos="fade-right" data-aos-offset="300" data-aos-duration="300" data-aos-easing="ease-in-sine">
                     <figure>
                         <img src="img/IPARK.png">
                     </figure>
@@ -486,8 +487,8 @@
                     </div><!-- .info end -->
                 </div><!-- .item end/1 -->
 
-                <div class="item" data-aos="fade-left"  data-aos-offset="500"
-                data-aos-duration="500" data-aos-duration="ease-in-sine">
+                <div class="item" data-aos="fade-left"  data-aos-offset="300"
+                data-aos-duration="300" data-aos-duration="ease-in-sine">
                     <figure>
                         <img src="img/LEGOLAND.png">
                     </figure>
@@ -525,15 +526,6 @@
 
             <div class="list" data-aos="fade-up"
             data-aos-duration="2000">
-                <div class="item">
-                    <a href="img/il_1.jpg" data-fancybox="images">
-                        <img src="img/il_1.jpg"></a>
-                    <div class="info">
-                        <h4>당근을 든 토끼</h4>
-                        <P><img src="img/il.png"></P>
-                    </div><!-- .info end -->
-                </div><!-- .item end -->
-
                 <div class="item">
                     <a href="img/il_6.png" data-fancybox="images">
                         <img src="img/il_6.gif" /></a>
@@ -573,15 +565,6 @@
                 <div class="item">
                     <a href="img/il_8.png" data-fancybox="images">
                         <img src="img/il_8.png" /></a>
-                    <div class="info">
-                        <h4>운동하는 사람</h4>
-                        <P><img src="img/il.png"></P>
-                    </div><!-- .info end -->
-                </div><!-- .item end -->
-
-                <div class="item">
-                    <a href="img/il_3.png" data-fancybox="images">
-                        <img src="img/il_3.png" /></a>
                     <div class="info">
                         <h4>운동하는 사람</h4>
                         <P><img src="img/il.png"></P>
@@ -750,7 +733,7 @@
         //스크롤을 했을 때 // 해당 section 안으로 화면이 보이면 // .btn ul li 스타일이 변화
         let headerTop = $('header').offset().top;
         $(window).scroll(function () {
-            let scrollBar = $(window).scrollTop() + 80;
+            let scrollBar = $(window).scrollTop() + 10;
             let scrollBar1 = $(window).scrollTop();
             //스크롤바의 y축값 = 0 + 50px
             //헤더가 가지고 있는 y축값보다
@@ -766,6 +749,8 @@
                 $('nav ul li').removeClass('on');
                 $('nav ul li:nth-child(1)').addClass('on');
                 /*                 $('.btn ul li').find('[href="#page1"]').parent('li').addClass('on') */
+            } else {
+                $('nav ul li').removeClass('on');
             }
             if (scrollBar > $('.web').offset().top) {
                 //cont01의 lo값보다 스크롤의 값이 더 클때 실행
